@@ -1,0 +1,17 @@
+.order_sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-right: 0.3px gray solid;
+}
+.restaurant_btn{
+    cursor: pointer;
+    display: block;
+}
+.restaurant_btn:hover{
+    color: var(--primary);
+}
+.active_restaurant_btn{
+    color: var(--primary);
+}

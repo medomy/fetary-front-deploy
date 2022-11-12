@@ -1,0 +1,13 @@
+.items_wrapper{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 6px 0px 6px 0px #050505;
+    padding: 8px;
+}
+.line_div {
+    display: block;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 2rem;
+    width: 70%;
+}

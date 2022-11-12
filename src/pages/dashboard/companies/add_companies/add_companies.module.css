@@ -1,0 +1,9 @@
+.upload_label {
+    border: transparent;
+    display: inline-block;
+    border-radius: 12px;
+    background-color: var(--primary_dashboard);
+    padding: 12px;
+    cursor: pointer;
+    color: var(--dashboard_body);
+}

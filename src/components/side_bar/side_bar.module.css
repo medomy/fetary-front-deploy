@@ -1,0 +1,44 @@
+.side_bar {
+    min-height: 100vh;
+    background-color: var(--primary_dashboard);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    box-shadow: 4px 0px 4px 0px #888888;
+    gap: 2.5rem;
+}
+.logo_wrap {
+    padding: 8px;
+    width: 80%;
+    border-bottom: 0.5px solid var(--socendry_dashboard);
+}
+.logo {
+    font-family: 'smooch';
+    font-weight: 700;
+    color: #dcdcdc;
+    cursor: default;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .side_bar {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .side_bar {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .side_bar{
+    background-color: var(--primary_dashboard);
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    box-shadow: 4px 0px 4px 0px #888888;
+    gap: 2.5rem;
+    }
+}

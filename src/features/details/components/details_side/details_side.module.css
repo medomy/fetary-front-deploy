@@ -1,0 +1,37 @@
+.details_side {
+    padding: 6px;
+}
+.price_space{
+    color:#C30B0B;
+    font-size: 24px;
+}
+.heart_icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+.heart_icon:hover{
+    color: var(--primary);
+}
+.counter_div {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    border-radius: 6px;
+    border: 0.1px solid gray;
+    width: 40%;
+}
+.counter_btn {
+    cursor: pointer;
+}
+.counter_btn:hover{
+    color: var(--primary);
+}
+.add_cart_btn{
+    border-radius: 8px;
+    padding: 12px;
+    border: transparent;
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+}

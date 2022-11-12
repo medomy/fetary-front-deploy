@@ -1,0 +1,10 @@
+.ordered_item_name_row {
+    padding: 8px;
+    border-bottom: 0.5px solid var(--primary_dashboard);
+    border-right: 2.5px solid var(--primary_dashboard);
+}
+
+.ordered_item_price_row {
+    padding: 8px;
+    border-bottom: 0.5px solid var(--primary_dashboard);
+}

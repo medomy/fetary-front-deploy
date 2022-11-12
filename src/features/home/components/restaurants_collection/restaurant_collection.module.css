@@ -1,0 +1,27 @@
+.restaurants_home_Sec {
+    background-image: url('https://el3.thembaydev.com/greenmart_fresh/wp-content/uploads/2021/09/bg-home1-01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.toRestsLink {
+    text-decoration: none;
+    color: black;
+}
+.toRestsLink:hover {
+    color: var(--primary);
+}
+.restaurant_card {
+    text-decoration: none;
+    color: black;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid rgba(169,169,169,0.3);
+}
+.rest_img {
+    width: 100%;
+}

@@ -1,0 +1,35 @@
+.header {
+    padding: 16px;
+    border-bottom: 0.25px solid gray;
+    text-align: center;
+}
+
+.bottom_link_wrap {
+    padding: 8px;
+    border-bottom: 0.2px solid gray;
+
+}
+
+.bottom_link {
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.bottom_link:hover {
+    color: var(--primary);
+}
+
+.bottom_link:active {
+    color: var(--primary);
+}
+
+.bottom_navbar_active {
+    color: var(--primary) !important;
+}
+
+.bottom_navbar {
+    padding: 12px;
+    background-color: white;
+}

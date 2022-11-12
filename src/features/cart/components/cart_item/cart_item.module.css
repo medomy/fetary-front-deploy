@@ -1,0 +1,25 @@
+.cart_row {
+    padding: 8px;
+    background-color: transparent;
+    border-bottom: 0.1px gray solid;
+}
+.cart_img{
+    width: 100%;
+}
+.counter_btn{
+    cursor: pointer;
+    font-size: 16px;
+}
+.counter_btn:hover{
+    color: var(--primary);
+}
+.counter{
+    font-size: 16px;
+}
+.delete_btn{
+    color: red;
+    cursor: pointer;
+}
+.delete_btn:hover{
+    color: red!important;
+}

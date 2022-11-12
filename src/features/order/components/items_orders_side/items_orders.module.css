@@ -1,0 +1,21 @@
+.items_side{
+    width: 100%;
+    padding: 8px;
+}
+
+.items_side h5{
+    width: 40%;
+}
+.items_side form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.search_input{
+    padding: 8px;
+    background-color: white;
+    border-radius: 6px;
+    border: 0.25px rgba(169, 169, 169, 0.5) solid;
+    width: 80% !important;
+
+}

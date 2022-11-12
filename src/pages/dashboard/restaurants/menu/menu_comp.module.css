@@ -1,0 +1,20 @@
+.menu_part{
+    text-align: center;
+}
+.menu_wrapper{
+    padding: 16px;
+    border: transparent;
+    background-color: white;
+    box-shadow: 4px 0px 4px 0px black;
+    height: 50vh;
+    border-radius: 12px;
+}
+.wrap{
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height: 90%;
+}
+.table_head {
+    padding: 8px;
+    border-bottom: 0.3px solid gray;
+}

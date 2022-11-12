@@ -1,0 +1,12 @@
+.entities_table {
+    padding: 12px;
+    width: 90%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 4px 0px 4px 0px #888888;
+}
+
+.table_head {
+    padding: 8px;
+    border-bottom: 0.3px solid gray;
+}

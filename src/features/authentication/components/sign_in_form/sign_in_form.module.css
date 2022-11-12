@@ -1,0 +1,24 @@
+.sign_in_btn {
+    padding: 6px !important;
+    background-color:var(--socendry) !important;
+    border: transparent;
+    width: 50%!important;
+}
+form {
+    width: 100%;
+}
+.password_area {
+    position: relative;
+}
+.show_password_btn {
+    position: absolute;
+    top: 45%;
+    right: 4px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+}
+.link:hover {
+    color: var(--primary);
+}

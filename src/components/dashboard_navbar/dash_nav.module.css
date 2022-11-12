@@ -1,0 +1,63 @@
+.dashboard_navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 6px 0px 6px 0px #888888;
+}
+.home_link {
+    text-decoration: none;
+}
+.home_link:hover{
+    text-decoration: none;
+}
+.home_link:focus{
+    text-decoration: none;
+}
+.dashboard_search_area {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.dash_icon_btn {
+    color: black;
+    font-size: large;
+    cursor: pointer;
+}
+.search_input {
+    padding: 6px;
+    border-radius: 50px;
+    border: var(--primary_dashboard) 1px solid;
+}
+.search_input:focus {
+    outline: none;
+}
+.dashboard_profile_area {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+.notification_area {
+    position: relative;
+}
+
+/* @media only screen and (min-width: 768px) {
+    .entities_links {
+        display: none;
+    }
+} */
+.lngs_btns_wrapper{
+    width: 25%;
+}
+.change_lang_btn{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.change_lang_btn:hover{
+    color: var(--primary);
+}
+.active_lang_btn{
+    color: var(--primary);
+    font-weight: 800;
+}

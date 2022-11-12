@@ -1,0 +1,6 @@
+.order_btn{
+    padding: 8px;
+    border-radius: 8px;
+    border: transparent;
+    background-color: var(--socendry);
+}

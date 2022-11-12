@@ -1,0 +1,32 @@
+.profile_sidebar {
+    width: 100%;
+    border: 0.5px solid black;
+    background-color: white;
+}
+
+.sidebar_element {
+    border-bottom: 0.5px solid black;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar_active_element {
+    border-bottom: 0.5px solid black;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    gap: 0.5rem;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: white;
+}
+
+.sidebar_element:hover {
+    background-color: var(--primary);
+    color: white;
+}

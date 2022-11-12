@@ -1,0 +1,50 @@
+.restaurants_order_link {
+    text-decoration: none;
+    color: black;
+}
+.restaurants_order_link:hover {
+    color: black;
+}
+.restaurants_order_link:active {
+    color: black;
+}
+.restaurant_card{
+    /* height: 200px; */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 12px;
+    height: 400px;
+    position: relative;
+}
+.restaurant_card:hover{
+    border: 0.3px var(--primary) solid;
+    border-radius: 12px;
+}
+.rest_img{
+    border-radius: 12px;
+    width: 100%;
+}
+.restaurant_desc_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rest_img img{
+    width: 100%;
+}
+.btn_wrap{
+    width: 80%;
+    align-self: center;
+    position: absolute;
+    bottom: 1.5rem;
+}
+.order_btn{
+    width: 100%;
+    border: transparent;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: var(--socendry);
+}
+.restaurant_desc{
+    width: 100%;
+}

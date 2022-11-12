@@ -1,0 +1,20 @@
+.cover_img{
+    position: relative;
+    height: 35vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profile_pic {
+    width: 150px !important;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    left: 2rem;
+    bottom: -30%;
+}
+.profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

@@ -1,0 +1,46 @@
+.element_side {
+    display: flex;
+    justify-content: space-between;
+    cursor:pointer;
+    padding: 2px;
+    width: 70%;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.name_area {
+    display: flex;
+    gap: 0.5rem;
+}
+.element_para {
+    color: #dcdcdc;
+    font-weight: 600;
+    transition: all 0.3s linear 0.3s;
+}
+.element_para:hover {
+    color: white;
+}
+.icon {
+    color: white;
+    font-weight: 600;
+}
+.options_wrap {
+    padding: 6px;
+    width: 70%;
+}
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.link:active {
+    color: var(--socendry_dashboard);
+}
+.link:hover {
+    color: var(--socendry_dashboard);
+}
+.active_link {
+    color: var(--socendry_dashboard);
+}

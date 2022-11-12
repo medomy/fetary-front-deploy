@@ -1,0 +1,29 @@
+.top_navbar {
+    background-color: rgba(169,169,169,0.5);
+    padding: 6px;
+    --bs-gutter-x:0rem!important
+}
+.navLink {
+    text-decoration: none;
+    color: black;
+}
+.navLink:hover{
+    color: var(--primary);
+}
+.first_sec {
+    gap: 1.5rem;
+}
+.socend_sec {
+    gap: 1.5rem;
+}
+.change_lang_btn{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.change_lang_btn:hover{
+    color: var(--primary);
+}
+.active_lang_btn{
+    color: var(--primary);
+    font-weight: 800;
+}

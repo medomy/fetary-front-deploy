@@ -1,0 +1,16 @@
+.update_btn{
+    padding: 8px;
+    border: transparent;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 6px;
+}
+.password_area {
+    position: relative;
+}
+
+.show_password_btn {
+    position: absolute;
+    top: 45%;
+    right: 4px;
+}

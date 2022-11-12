@@ -1,0 +1,9 @@
+.menu_page {
+    position: relative;
+    min-height: 80vh;
+}
+.toast_wrap{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}

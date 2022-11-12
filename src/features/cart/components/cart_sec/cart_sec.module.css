@@ -1,0 +1,20 @@
+.cart_sec{
+    min-height: 80vh;
+}
+.cart_div{
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 6px 0px 6px 0px #888888;
+}
+.checkout_btn{
+    padding: 8px;
+    border-radius: 6px;
+    background-color: var(--socendry);
+    border: transparent;
+    width: 100%;
+}
+.total_wrap{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+}

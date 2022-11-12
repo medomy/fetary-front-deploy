@@ -1,0 +1,31 @@
+.navbar {
+    background-color: transparent;
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'smooch';
+    font-weight: 700;
+    color: var(--primary);
+    cursor: default;
+}
+
+.links_wrap {
+    justify-content: space-between;
+    display: flex;
+}
+
+.links {
+    text-decoration: none;
+    font-weight: 600;
+    width: 25%;
+    color: black;
+    transition: all 0.5s linear 1s;
+}
+
+.links:hover {
+    font-weight: 800;
+    color: var(--primary);
+    width: 33%;
+}

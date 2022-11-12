@@ -1,0 +1,19 @@
+.dash_card {
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%!important;
+    color: white;
+}
+.dash_card_up {
+    display: flex;
+    padding: 6px;
+    justify-content: space-between;
+    border-bottom: #FFFFFF;
+}
+.info_card {
+    font-size: large;
+}
+
+.dash_card_down {
+    padding: 6px;
+}

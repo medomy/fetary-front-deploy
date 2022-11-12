@@ -1,0 +1,19 @@
+.receipt{
+    padding: 12px;
+    border: transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 6px 0px 6px 0px #888888;
+}
+.receipt_sec{
+    min-height: 80vh;
+}
+.confirm_btn {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: var(--socendry);
+    border: transparent;
+    width: 100%;
+}

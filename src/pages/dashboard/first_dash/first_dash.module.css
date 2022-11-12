@@ -1,0 +1,16 @@
+.first_dash {
+    padding: 8px;
+}
+.card_sec {
+    gap: 2rem;
+    justify-content: center;
+}
+.cards_wrapper {
+    width: 100%;
+}
+.full_page {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

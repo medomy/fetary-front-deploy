@@ -1,0 +1,17 @@
+.prev_btn {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: -1rem;
+    z-index: 100;
+}
+.prev_btn:hover {
+    background-color: var(--socendry);
+}

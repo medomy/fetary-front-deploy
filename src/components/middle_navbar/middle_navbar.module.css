@@ -1,0 +1,143 @@
+.nav_cntainer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.sticky_nav {
+    padding: 16px;
+    background-color: white;
+}
+
+.search_form {
+    gap: 0px;
+}
+
+.search_bar {
+    padding: 8px;
+    background-color: white;
+    border-radius: 6px 0px 0px 6px;
+    border: 0.25px rgba(169, 169, 169, 0.5) solid;
+    width: 80% !important;
+}
+
+.search_bar_ar {
+    padding: 8px;
+    background-color: white;
+    border-radius: 0px 6px 6px 0px;
+    border: 0.25px rgba(169, 169, 169, 0.5) solid;
+    width: 80% !important;
+}
+
+.search_bar:focus {
+    outline: none;
+}
+
+.search_btn {
+    background-color: white;
+    border-radius: 0px 6px 6px 0px;
+    border: 0.25px rgba(169, 169, 169, 0.5) solid;
+    border-left: rgba(169, 169, 169, 0.5) solid 0.25px !important;
+    text-align: center;
+    width: 20% !important;
+}
+
+.search_btn_ar {
+    background-color: white;
+    border-radius: 6px 0px 0px 6px;
+    border: 0.25px rgba(169, 169, 169, 0.5) solid;
+    border-left: rgba(169, 169, 169, 0.5) solid 0.25px !important;
+    text-align: center;
+    width: 20% !important;
+}
+
+.search_btn:hover {
+    color: var(--primary);
+}
+
+.info_box {
+    padding: 8px;
+}
+
+.info_box i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.info_header {
+    font-weight: 800;
+}
+
+.info_bottom {
+    color: rgba(169, 169, 169, 0.8);
+    text-decoration: none;
+}
+
+.info_bottom:hover {
+    color: rgba(169, 169, 169, 0.8);
+}
+
+.info_bottom:focus {
+    color: rgba(169, 169, 169, 0.8);
+}
+
+.cart_box {
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    color: white;
+    padding: 8px;
+    gap: 5px;
+}
+
+.cart_box i {
+    font-size: 1.5rem;
+}
+
+.info_bottom_cart {
+    color: white;
+    text-decoration: none;
+}
+
+.info_bottom_cart:hover {
+    color: white;
+}
+
+.info_bottom_cart:focus {
+    color: white;
+}
+
+.drawer_btn {
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s linear;
+    box-shadow: 2px 2px 5px #17141d;
+    height: 40px;
+    align-self: center;
+}
+
+.drawer_span {
+    width: 22px;
+    height: 2px;
+    background-color: black;
+}
+
+.drawer_span:last-child {
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 720px) {
+    .search_form_wrap {
+        display: none !important;
+    }
+
+    /* .infos_wrap{
+        display: none!important;
+    } */
+}

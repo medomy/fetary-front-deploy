@@ -1,0 +1,28 @@
+.register_form {
+    width: 100%;
+    background-color: white;
+    border: transparent;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.password_area {
+    position: relative;
+}
+
+.show_password_btn {
+    position: absolute;
+    top: 45%;
+    right: 4px;
+}
+
+.register_btn {
+    padding: 6px !important;
+    background-color: var(--socendry) !important;
+    border: transparent;
+    width: 50% !important;
+    border-radius: 6px;
+}
+.img {
+    width: 100%;
+}

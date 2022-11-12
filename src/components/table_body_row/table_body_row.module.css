@@ -1,0 +1,26 @@
+.table_row {
+    padding: 8px;
+    border-bottom:0.3px solid gray ;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.edit_btn {
+    color: green;
+}
+.delete_btn {
+    color: red;
+}
+.img_style {
+    width: 80%;
+}
+
+.details_link {
+    text-decoration: none;
+    color: var(--primary_dashboard);
+}
+
+.details_link:hover {
+    color: var(--socendry_dashboard);
+}

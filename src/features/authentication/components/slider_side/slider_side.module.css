@@ -1,0 +1,50 @@
+.slider_side {
+    background-image: url('../../assets/images/breakfast_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.slider_side_center {
+    min-height: 100vh;
+}
+
+.small_screen_form {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    width: 75%;
+    box-shadow: 8px 0px 8px 0px var(--socendry);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .small_screen_form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .small_screen_form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .small_screen_form {
+        display: none;
+        background-color: white;
+        border-radius: 12px;
+        padding: 8px;
+        width: 50%;
+    }   
+}

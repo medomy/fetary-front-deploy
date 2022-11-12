@@ -1,0 +1,8 @@
+.inner_caro {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+.caro_img {
+    width: 30%;
+}

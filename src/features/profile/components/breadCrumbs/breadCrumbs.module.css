@@ -1,0 +1,8 @@
+.home_link {
+    color:black;
+    text-decoration: none;
+}
+
+.home_link:hover{
+    color: var(--primary);
+}

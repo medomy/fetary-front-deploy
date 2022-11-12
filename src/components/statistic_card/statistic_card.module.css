@@ -1,0 +1,23 @@
+.statistic_card {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 6px 0px 6px 0px #888888;
+    width: 100%;
+}
+.statistic_card_header {
+    padding: 6px;
+    width: 100%;
+    border-bottom: 0.3px solid black;
+    text-align: center;
+}
+.statistic_card_subject {
+    padding: 8px;
+}
+.items_subject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+}

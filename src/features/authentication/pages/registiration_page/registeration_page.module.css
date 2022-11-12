@@ -1,0 +1,7 @@
+.registeration_page {
+    background-image: url('../../assets/images/breakfast_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px;
+}
