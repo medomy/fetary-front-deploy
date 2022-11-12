@@ -2,7 +2,7 @@ import axios from "axios";
 import config from "../config/config";
 
 export const public_instance = axios.create({
-    baseURL:"http://localhost:4000/fetar/api/v1",
+    baseURL:"https://fetary-mysql-backend.herokuapp.com/fetar/api/v1",
 })
 
 export const img_upload_inst = axios.create({
