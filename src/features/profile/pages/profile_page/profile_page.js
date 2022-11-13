@@ -35,7 +35,8 @@ function ProfilePage() {
     const getData = async () => {
         try {
             const _orders = await getOrdersOneUser(params.id);
-            const orderedItems = await getAllorderedItems(_orders[_orders.length -1].id);
+            let orderedItems = [];
+            if(_orders.length > 1) orderedItems = await getAllorderedItems(_orders[_orders.length -1].id);
             const allItems = await getAllItems();
             let usersItems = [];
             orderedItems.forEach((oItem)=>{

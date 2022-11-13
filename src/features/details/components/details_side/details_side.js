@@ -1,14 +1,18 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addItems, checkRestaurantsItems } from '../../../../store/reducers/added_items/added_items';
 import styles from './details_side.module.css'
 function DetailsSide({ item }) {
     const dispatch = useDispatch();
-    const {t} = useTranslation();
-    const addToCart = (item)=>{
-        dispatch(addItems(item));
-        dispatch(checkRestaurantsItems());
+    const { t } = useTranslation();
+    const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+    const addToCart = (item) => {
+        if (isLoggedIn) {
+            dispatch(addItems(item));
+            dispatch(checkRestaurantsItems());
+        }
+        else alert("you are not registered yet");
     }
     return (
         <section className={styles.details_side}>
@@ -35,7 +39,7 @@ function DetailsSide({ item }) {
                     <i className="bi bi-dash"></i>
                 </span>
             </div>
-            <button className={`my-3 ${styles.add_cart_btn}`} onClick = {()=> addToCart(item)}>
+            <button className={`my-3 ${styles.add_cart_btn}`} onClick={() => addToCart(item)}>
                 {t("Add_to_cart")}
             </button>
         </section>

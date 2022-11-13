@@ -6,6 +6,7 @@ import { changeIsDark } from '../../store/reducers/dark_mode/dark_mode_slice';
 import i18next from 'i18next';
 import { setLang } from '../../store/reducers/lang_slice/lang_slice';
 import styles from './dash_nav.module.css'
+import "bootstrap/js/src/collapse.js";
 export const DashboardNavbar = () => {
     const dispatch = useDispatch();
     const language = useSelector((state) => state.lang.lang);
@@ -50,6 +51,7 @@ export const DashboardNavbar = () => {
     }
     const changeMode = (e)=>{
         dispatch(changeIsDark(e.target.checked));
+        localStorage.setItem("theme" , e.target.checked);
     }
     useEffect(() => {
         // setEntities([{
@@ -80,7 +82,7 @@ export const DashboardNavbar = () => {
         <>
             <nav className={`navbar navbar-expand-lg ${isDark ? 'navbar-dark' : 'navbar-light'} ${isDark ? 'bg-dark' : 'bg-light'}`}>
                 <div className="container-fluid">
-                    <Link className={styles.home_link} to='/'>
+                    <Link className={`${styles.home_link} mx-4`} to='/'>
                         <h2 className={`logo_admin text-center ms-4`}>Fetary</h2>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +90,7 @@ export const DashboardNavbar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 col-md-6 justify-content-center">
-                            <li className="nav-item mx-1">
+                            <li className="nav-item ms-4">
                                 <Link className="nav-link active" aria-current="page" to={'/admin'}>{t("Home")}</Link>
                             </li>
                             {entities.map((entity) => {

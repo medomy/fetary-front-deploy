@@ -8,10 +8,11 @@ import styles from './item_card.module.css'
 function ItemCard({ item }) {
     const [restaurant, setRestaurant] = useState({});
     const dispatch = useDispatch();
-    const addedItems = useSelector((state)=> state.cart.addedItems);
-    const isDark = useSelector((state)=> state.theme.isDarkMode);
-    const {t} = useTranslation();
-    const lang = useSelector((state)=> state.lang.lang);
+    const addedItems = useSelector((state) => state.cart.addedItems);
+    const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+    const isDark = useSelector((state) => state.theme.isDarkMode);
+    const { t } = useTranslation();
+    const lang = useSelector((state) => state.lang.lang);
     const onInit = async () => {
         if (item) {
             console.log(item);
@@ -19,9 +20,14 @@ function ItemCard({ item }) {
             setRestaurant(_restaurant);
         }
     }
-    const addToCart = (item)=>{
-        dispatch(addItems(item));
-        dispatch(checkRestaurantsItems());
+    const addToCart = (item) => {
+        if (isLoggedIn) {
+            dispatch(addItems(item));
+            dispatch(checkRestaurantsItems());
+        }
+        else {
+            alert('you must register first');
+        }
     }
     useEffect(() => {
         onInit();
@@ -32,7 +38,7 @@ function ItemCard({ item }) {
                 <div className={styles.img_wrapper}>
                     <img className={styles.item_img} src={item ? item.img_url : "https://el3.thembaydev.com/greenmart_fresh/wp-content/uploads/2021/08/product-02-291x291.jpg"} alt='item_image' />
                     <div className={styles.item_Card_Adds}>
-                        <div className={`${styles.btn_wrap} ${isDark ? 'icons-dark':''}`}>
+                        <div className={`${styles.btn_wrap} ${isDark ? 'icons-dark' : ''}`}>
                             <i className="bi bi-heart"></i>
                             <span>{t('favourites')}</span>
                         </div>
@@ -45,7 +51,7 @@ function ItemCard({ item }) {
             </Link> : <div className={styles.img_wrapper}>
                 <img className={styles.item_img} src={item ? item.img_url : "https://el3.thembaydev.com/greenmart_fresh/wp-content/uploads/2021/08/product-02-291x291.jpg"} alt='item_image' />
                 <div className={styles.item_Card_Adds}>
-                    <div className={`${styles.btn_wrap} ${isDark ? 'icons-dark':''}`}>
+                    <div className={`${styles.btn_wrap} ${isDark ? 'icons-dark' : ''}`}>
                         <i className="bi bi-heart"></i>
                         <span>{t('favourites')}</span>
                     </div>
@@ -56,14 +62,14 @@ function ItemCard({ item }) {
                 </div>
             </div>}
             <div className={`${styles.restaurant_Sec} ${isDark ? 'dark-mode-txt' : ''} mt-1 mb-1`}>
-                {restaurant && lang=== 'ar'? restaurant.name_ar:restaurant && lang=== 'en'?restaurant.name_en : 'restaurant'}
+                {restaurant && lang === 'ar' ? restaurant.name_ar : restaurant && lang === 'en' ? restaurant.name_en : 'restaurant'}
             </div>
-            <p className={`my-2 ${isDark ? 'dark-mode-txt' : ''}`}>{item && lang === 'ar'? item.name_ar :item.name_en}</p>
+            <p className={`my-2 ${isDark ? 'dark-mode-txt' : ''}`}>{item && lang === 'ar' ? item.name_ar : item.name_en}</p>
             <span className={`${styles.item_price} icons-dark`}>
                 <i className="bi bi-currency-pound"></i>
                 {item ? item.price : 50.0}
             </span>
-            <button className={styles.order_btn} onClick={()=> addToCart(item)}>
+            <button className={styles.order_btn} onClick={() => addToCart(item)}>
                 {t('Add_to_cart')}
             </button>
         </div>

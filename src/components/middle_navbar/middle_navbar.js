@@ -62,7 +62,7 @@ function MiddleNavBAr() {
     }
     const changeMode = (e)=>{
         dispatch(changeIsDark(e.target.checked));
-        console.log(e.target.checked);
+        localStorage.setItem("theme" , e.target.checked);
     }
     useEffect(() => {
         console.log(isLoggedIn);

@@ -48,6 +48,7 @@ function SignInForm() {
         e.preventDefault();
         try {
             if (userErrs.email === null && userErrs.password === null) {
+                console.log(userErrs);
                 const user = await signIn(userVals.email, userVals.password, remember_checked);
                 console.log(user);
                 if (user) dispatch(setUser(user));

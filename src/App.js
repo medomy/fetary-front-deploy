@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { setLoggedIn, setUser } from './store/reducers/user_slice/user_slice';
 import { setLang } from './store/reducers/lang_slice/lang_slice';
 import i18n from './i18n';
+import { changeIsDark } from './store/reducers/dark_mode/dark_mode_slice';
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
       dispatch(setLoggedIn(true));
     }
     dispatch(setLang(localStorage.getItem('i18nextLng')));
+    dispatch(changeIsDark(localStorage.getItem("theme") === "true" ? true : localStorage.getItem("theme") === "false" ? false : false));
   }, [])
   return (
     <>

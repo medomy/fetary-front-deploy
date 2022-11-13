@@ -4,6 +4,7 @@ import { public_instance } from '../../../network/instance';
 export async function signIn(email, password , checked) {
     try {
         const userToken = await public_instance.post('/auth', { email, password });
+        console.log(userToken);
         console.log(userToken.data);
         if (userToken.data !== null) {
             const user = decodeToken(userToken.data);
