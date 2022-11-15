@@ -10,6 +10,7 @@ export const langSlice = createSlice({
     reducers : {
         setLang : (state,payload)=>{
             state.lang = payload.payload;
+            document.getElementsByTagName("html").lang = payload.payload;
         }
     }
 })

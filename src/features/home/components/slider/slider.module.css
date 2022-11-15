@@ -103,8 +103,8 @@
     border-radius: 6px !important;
     color: white !important;
     animation: animation_btn 2.5s !important;
-    bottom: 5rem;
-    right: 2.5rem;
+    bottom: 10%;
+    right: 10%;
     opacity: 1;
     animation-fill-mode: forwards;
     cursor: pointer;
@@ -114,8 +114,8 @@
     position: absolute;
     color: white !important;
     animation: animation_words 2.5s !important;
-    top: 5rem;
-    right: 2.5rem;
+    top: 10%;
+    right: 10%;
     opacity: 1;
     animation-fill-mode: forwards;
 }
@@ -128,8 +128,8 @@
     }
 
     100% {
-        bottom: 5rem;
-        right: 2.5rem;
+        bottom: 10%;
+        right: 10%;
         opacity: 1;
     }
 
@@ -143,8 +143,27 @@
     }
 
     100% {
-        top: 5rem;
-        right: 2.5rem;
+        top: 10%;
+        right: 10%;
         opacity: 1;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .slider_wrap {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        min-height: 300px;
+    }
+    
+    .slide_wrap_active {
+        display: flex;
+        width: 100%;
+        min-height: 300px;
+        transition: all 0.5s;
+        animation: fadeIn 2s;
     }
 }

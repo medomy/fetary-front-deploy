@@ -133,7 +133,7 @@ function Footer() {
                     </div>
                     <p className={styles.copy_write}>© 2022 <strong>Fetary</strong>. All rights reserved.</p>
                 </div>
-                <div className={`${styles.about_footer_sec} row col-md-4 col-12 mx-5`}>
+                <div className={`${styles.about_footer_sec} row col-md-4 col-12`}>
                     <div className={`${styles.about_list} col-6`}>
                         <h6 className={`mb-4  ${isDark ? 'dark-mode-txt':''}`}>{t('about')}</h6>
                         <ul className={`${styles.contacts_footer_list}`}>

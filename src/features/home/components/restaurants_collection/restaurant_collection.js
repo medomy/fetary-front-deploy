@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './restaurant_collection.module.css'
-import restaurantImg from '../../assets/images/restaurant_photo.png'
 import { getAllRestaurants } from '../../../../services/restaurants'
 import { useEffect } from 'react'
 import RestaurantCard from '../../../restaurants/components/restaurant_card/restaurant_card'
@@ -12,8 +11,14 @@ function RestaurantsCollection() {
     const getData = async () => {
         try {
             const _restaurants = await getAllRestaurants();
-            console.log(_restaurants);
-            setRestaurants(_restaurants);
+            if(_restaurants.length > 4) {
+                let rests = [];
+                for(let i =0 ; i < 4 ; i++){
+                    rests.push(_restaurants[i]);
+                }
+                setRestaurants(rests);
+            }
+            else setRestaurants(_restaurants);
         } catch (err) {
             console.log(err);
         }
@@ -27,7 +32,7 @@ function RestaurantsCollection() {
                 <div className={`col-md-8 col-12 ${styles.restaurants_cards_wrapper}`}>
                     <div className='row justify-content-between mb-5 align-items-center'>
                         <h2 className={`col-10 ${isDark? 'dark-mode-txt' :''}`}>Our Restaurants</h2>
-                        <Link className={`${styles.toRestsLink} ${isDark? 'dark-mode-links':''} col-1`} to={'#'}>see all</Link>
+                        <Link className={`${styles.toRestsLink} ${isDark? 'dark-mode-links':''} col-2`} to={'#'}>see all</Link>
                     </div>
                     <div className='row justify-content-center'>
                         {restaurants.map((restaurant) => {

@@ -9,9 +9,14 @@
     border-radius: 50%;
     position: absolute;
     bottom: 50%;
-    left: -1rem;
+    left: 1rem;
     z-index: 100;
 }
 .prev_btn:hover {
     background-color: var(--socendry);
+}
+@media only screen and (max-width: 720px) {
+    .prev_btn{
+        display: none;
+    }
 }

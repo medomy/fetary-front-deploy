@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import Time from '../../utils/date_format/date_format';
 import styles from './dash_card.module.css'
 function DashCard({iconPath , info , infoType , color}) {
     const isDark = useSelector((state)=> state.theme.isDarkMode);
@@ -17,7 +18,7 @@ function DashCard({iconPath , info , infoType , color}) {
         </div>
         <div className={`${styles.dash_card_down}`}>
         <i className="bi bi-clock"></i>
-        <span> updated: 2:15</span>
+        <span> {Time.getexactTime(new Date)}</span>
         </div>
     </div>
   )

@@ -53,3 +53,6 @@
 .sunscripe_input:focus {
     outline: none;
 }
+.about_footer_sec {
+    padding: 0px !important;
+}

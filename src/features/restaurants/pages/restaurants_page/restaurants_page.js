@@ -14,7 +14,8 @@ function Restaurants_page() {
         img_url :  'VARCHAR(100)' ,
         logo:  restaurantImg ,
         phone_number: "no" ,
-        description: "yoyooyoyoyoyoyo"
+        description_en: "yoyooyoyoyoyoyo",
+        description_ar: "yoyooyoyoyoyoyo"
     }]);
     const onInit = async ()=>{
         try{

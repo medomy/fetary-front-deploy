@@ -21,6 +21,9 @@ function App() {
       dispatch(setUser(JSON.parse(sessionStorage.getItem('user'))));
       dispatch(setLoggedIn(true));
     }
+    if(localStorage.getItem("user")){
+      dispatch(setUser(JSON.parse(localStorage.getItem("user"))));
+    }
     dispatch(setLang(localStorage.getItem('i18nextLng')));
     dispatch(changeIsDark(localStorage.getItem("theme") === "true" ? true : localStorage.getItem("theme") === "false" ? false : false));
   }, [])

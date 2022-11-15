@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { changeIsDark } from '../../store/reducers/dark_mode/dark_mode_slice';
 import i18next from 'i18next';
 import { setLang } from '../../store/reducers/lang_slice/lang_slice';
 import styles from './dash_nav.module.css'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import "bootstrap/js/src/collapse.js";
 export const DashboardNavbar = () => {
     const dispatch = useDispatch();
@@ -49,9 +50,9 @@ export const DashboardNavbar = () => {
         dispatch(setLang(code));
         i18next.changeLanguage(code);
     }
-    const changeMode = (e)=>{
+    const changeMode = (e) => {
         dispatch(changeIsDark(e.target.checked));
-        localStorage.setItem("theme" , e.target.checked);
+        localStorage.setItem("theme", e.target.checked);
     }
     useEffect(() => {
         // setEntities([{
@@ -80,7 +81,7 @@ export const DashboardNavbar = () => {
     // },[user])
     return (
         <>
-            <nav className={`navbar navbar-expand-lg ${isDark ? 'navbar-dark' : 'navbar-light'} ${isDark ? 'bg-dark' : 'bg-light'}`}>
+            {/* <nav className={`navbar navbar-expand-lg ${isDark ? 'navbar-dark' : 'navbar-light'} ${isDark ? 'bg-dark' : 'bg-light'}`}>
                 <div className="container-fluid">
                     <Link className={`${styles.home_link} mx-4`} to='/'>
                         <h2 className={`logo_admin text-center ms-4`}>Fetary</h2>
@@ -119,7 +120,43 @@ export const DashboardNavbar = () => {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
+            <Navbar bg={isDark ? 'dark' : 'light'} expand="lg">
+                <Container>
+                    <Link className={`${styles.home_link} mx-4`} to='/'>
+                        <h2 className={`logo_admin text-center ms-4`}>Fetary</h2>
+                    </Link>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <NavLink className="nav-link" to={'/admin'}>Home</NavLink>
+                            {entities.map((entity) => {
+                                return (
+                                    <li className="nav-item mx-1" key={entity.name}>
+                                        <Link className="nav-link active" aria-current="page" to={`/admin/${entity.name}`}>{entity.name}</Link>
+                                    </li>
+                                )
+                            })}
+                            <div className={`${styles.lngs_btns_wrapper} mx-4 d-flex justify-content-center align-items-center`}>
+                                {langs.map((lang) => (
+                                    <span className={`${styles.change_lang_btn} ${isDark ? 'dark-mode-links' : ''} ${isDark && language === lang.code ? 'dark-mode-links-active' : !isDark && language === lang.code ? styles.active_lang_btn : ''}`} key={lang.id} onClick={() => selectLang(lang.code)}>{lang.lang}</span>
+                                ))}
+                            </div>
+                            <li className="nav-item mx-1">
+                                <Link className="nav-link active" aria-current="page" to={`/profile/${user.uId}`}>
+                                    {user.user_name}
+                                </Link>
+                            </li>
+                            <li className='nav-item mx-1'>
+                                <div className="form-check form-switch mx-2">
+                                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isDark} onChange={changeMode} />
+                                    <label className={`form-check-label ${isDark ? 'dark-mode-txt' : ''}`} htmlFor="flexSwitchCheckDefault">{mode}</label>
+                                </div>
+                            </li>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </>
     )
 }

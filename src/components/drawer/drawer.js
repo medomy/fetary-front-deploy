@@ -38,7 +38,7 @@ function CustomDrawer({ isShowed, links, header, hideDrawer }) {
                 <h2 className={`logo_admin ${isDark ? 'icons-dark' : ''}`}>Fetary</h2>
                 <h3>{header}</h3>
                 <div className="form-check form-switch mx-2">
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={changeMode} />
+                    <input className="form-check-input" type="checkbox" role="switch" checked={isDark} id="flexSwitchCheckDefault" onChange={changeMode} />
                     <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{mode}</label>
                 </div>
             </div>
