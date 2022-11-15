@@ -90,6 +90,7 @@
     color: white;
     padding: 8px;
     gap: 5px;
+    position: relative;
 }
 
 .cart_box i {
@@ -140,4 +141,9 @@
     /* .infos_wrap{
         display: none!important;
     } */
+}
+.cart_badge{
+    position: absolute;
+    top: 10%;
+    left: 25%;
 }

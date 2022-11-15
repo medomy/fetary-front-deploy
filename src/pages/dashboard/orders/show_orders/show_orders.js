@@ -195,8 +195,14 @@ function ShowOrders() {
             setRemoved(false);
         },3000)
     }
+    const changeUser = (e)=>{
+        debugger;
+        console.log(e.target.value);
+        setUser(e.target.value);
+    }
     useEffect(() => {
         getData();
+        console.log(orders);
         window.addEventListener('resize', changeCols);
         return () => window.removeEventListener('resize', changeCols);
     }, [user, restaurant, date])
@@ -206,7 +212,7 @@ function ShowOrders() {
             <form className='row my-4 px-5 align-items-center justify-content-center' onSubmit={submit}>
                 <div className='col-md-3 col-8'>
                     <label htmlFor="chooseUser" className={`form-label ${isDark ? 'dark-mode-txt' : ''}`}>{t("choose_a_user")}</label>
-                    <select defaultValue={1} className={`form-select form-select`} aria-label="Default select example" id='chooseUser' ref={userRef} onChange={(e) => setUser(e.target.value)}>
+                    <select defaultValue={1} className={`form-select form-select`} aria-label="Default select example" id='chooseUser' ref={userRef} onChange={changeUser}>
                         <option value={null}>all users</option>
                         {users.map((user) => {
                             return (

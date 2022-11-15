@@ -129,25 +129,39 @@ export const DashboardNavbar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <NavLink className="nav-link" to={'/admin'}>Home</NavLink>
+                            <NavLink className={({ isActive }) => {
+                                const linkClasses = ['nav-link', isDark ? 'dark-mode-links' : ''];
+                                if (isActive) {
+                                    if (isDark) linkClasses.push('dark-mode-links-active');
+                                    else linkClasses.push('active');
+                                }
+                                return linkClasses.join(" ");
+                            }} to={'/admin'}>Home</NavLink>
                             {entities.map((entity) => {
                                 return (
-                                    <li className="nav-item mx-1" key={entity.name}>
-                                        <Link className="nav-link active" aria-current="page" to={`/admin/${entity.name}`}>{entity.name}</Link>
+                                    <li className={`nav-item mx-1`} key={entity.name}>
+                                        <NavLink className={({ isActive }) => {
+                                            const linkClasses = ['nav-link', isDark ? 'dark-mode-links' : ''];
+                                            if (isActive) {
+                                                if (isDark) linkClasses.push('dark-mode-links-active');
+                                                else linkClasses.push('active');
+                                            }
+                                            return linkClasses.join(" ");
+                                        }} aria-current="page" to={`/admin/${entity.name}`}>{entity.name}</NavLink>
                                     </li>
                                 )
                             })}
-                            <div className={`${styles.lngs_btns_wrapper} mx-4 d-flex justify-content-center align-items-center`}>
-                                {langs.map((lang) => (
-                                    <span className={`${styles.change_lang_btn} ${isDark ? 'dark-mode-links' : ''} ${isDark && language === lang.code ? 'dark-mode-links-active' : !isDark && language === lang.code ? styles.active_lang_btn : ''}`} key={lang.id} onClick={() => selectLang(lang.code)}>{lang.lang}</span>
-                                ))}
-                            </div>
+                            {langs.map((lang) => (
+                                <li className={`nav-item mx-1 d-flex justify-content-center align-items-center`} key={lang.id}>
+                                    <span className={`${styles.change_lang_btn} nav-item mx-1 ${isDark ? 'dark-mode-links' : ''} ${isDark && language === lang.code ? 'dark-mode-links-active' : !isDark && language === lang.code ? styles.active_lang_btn : ''}`} onClick={() => selectLang(lang.code)}>{lang.lang}</span>
+                                </li>
+                            ))}
                             <li className="nav-item mx-1">
-                                <Link className="nav-link active" aria-current="page" to={`/profile/${user.uId}`}>
+                                <Link className={`nav-link active ${isDark ? 'dark-mode-links' : ''}`} aria-current="page" to={`/profile/${user.uId}`}>
                                     {user.user_name}
                                 </Link>
                             </li>
-                            <li className='nav-item mx-1'>
+                            <li className='nav-item mx-1 d-flex justify-content-center align-items-center'>
                                 <div className="form-check form-switch mx-2">
                                     <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isDark} onChange={changeMode} />
                                     <label className={`form-check-label ${isDark ? 'dark-mode-txt' : ''}`} htmlFor="flexSwitchCheckDefault">{mode}</label>

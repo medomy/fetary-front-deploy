@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Badge } from 'react-bootstrap';
 import { changeIsDark } from '../../store/reducers/dark_mode/dark_mode_slice';
 import CustomDrawer from '../drawer/drawer';
 import styles from './middle_navbar.module.css';
@@ -12,6 +13,7 @@ function MiddleNavBAr() {
     const user = useSelector((state) => state.user.user);
     const isDark = useSelector((state) => state.theme.isDarkMode);
     const mode = useSelector((state) => state.theme.mode);
+    const addedItems = useSelector((state)=> state.cart.addedItems);
     const dispatch = useDispatch();
     const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
     const windowWidth = useRef(window.innerWidth);
@@ -60,9 +62,9 @@ function MiddleNavBAr() {
         windowWidth.current <= 720 ? setIsSmall(true) : setIsSmall(false);
         // w_width <=720 ? setIsSmall(true) : setIsSmall(false);
     }
-    const changeMode = (e)=>{
+    const changeMode = (e) => {
         dispatch(changeIsDark(e.target.checked));
-        localStorage.setItem("theme" , e.target.checked);
+        localStorage.setItem("theme", e.target.checked);
     }
     useEffect(() => {
         console.log(isLoggedIn);
@@ -75,9 +77,9 @@ function MiddleNavBAr() {
     }, [])
     return (
         <div className={`container-fluid ${styles.nav_cntainer}`}>
-            <div className={`row align-items-center ${styles.sticky_nav} ${isDark ? 'bg-dark dark-mode-txt' :''}`}>
+            <div className={`row align-items-center ${styles.sticky_nav} ${isDark ? 'bg-dark dark-mode-txt' : ''}`}>
                 <div className='col-md-3 col-3 d-flex justify-content-end'>
-                    <h2 className={`logo_admin ${isDark ? 'icons-dark':''}`}>Fetary</h2>
+                    <h2 className={`logo_admin ${isDark ? 'icons-dark' : ''}`}>Fetary</h2>
                 </div>
                 <div className={`col-md-3 ${styles.search_form_wrap}`}>
                     <form className={`row ${styles.search_form}`}>
@@ -122,6 +124,9 @@ function MiddleNavBAr() {
                     <Link to={'/cart'} className={`${styles.info_bottom_cart}`}>
                         <div className={`${styles.cart_box} d-flex align-items-center ms-5 px-3 ${isDark ? 'elements-bg-dark' : ''}`}>
                             <i className={`bi bi-cart-fill me-2`}></i>
+                            <Badge bg="light" text="dark" pill className={styles.cart_badge}>
+                                {addedItems.length}
+                            </Badge>
                             <div className={`${styles.info}`}>
                                 <p className={`${styles.info_header}`}>
                                     {t("Orders")}
@@ -133,7 +138,7 @@ function MiddleNavBAr() {
                         </div>
                     </Link>
                     <div className="form-check form-switch mx-2">
-                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isDark} onChange={changeMode}/>
+                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={isDark} onChange={changeMode} />
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{mode}</label>
                     </div>
                 </div>
